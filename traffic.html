@@ -1,0 +1,105 @@
+Traffic Lights
+HTML Code:
+***
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index16.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="traffic.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <p id="red" class="color"></p>
+            <p id="orange" class="color"></p>
+            <p id="green" class="color"></p>
+        </div>
+        <div class="card2">
+            <button id="btn1" class="btn red">Red</button>
+            <button id="btn2" class="btn orange">orange</button>
+            <button id="btn3" class="btn green">Green</button>
+        </div>
+
+    </div>
+    <script src="traffic.js"></script>
+</body>
+</html>
+***
+CSS Code:
+***
+.container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    width: 100vh;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    width: 50px;
+    height: 160px;
+    background-color: black;
+
+}
+.card2{
+    display: flex;
+    flex-direction: column;
+    width: flex;
+    height: 160px;
+
+}
+.btn{
+    margin: 13px 10px;
+    width: 90px;
+    padding: 6px;
+    border-radius:9px ;
+    cursor: pointer;
+    color:white;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+
+}
+.color{
+    background-color: gray;
+    height: 40px;
+    border-radius: 25px;
+    margin: 12px;
+}
+***
+JAVAScript code:
+***
+let p1=document.getElementById('red');
+let p2=document.getElementById('orange');
+let p3=document.getElementById('green');
+let b1=document.getElementById('btn1');
+let b2=document.getElementById('btn2');
+let b3=document.getElementById('btn3');
+b1.onclick=function(){
+    p1.style.backgroundColor='red';
+    p2.style.backgroundColor='grey';
+    p3.style.backgroundColor='grey';
+
+}
+b2.onclick=function(){
+    p1.style.backgroundColor='grey';
+    p2.style.backgroundColor='orange';
+    p3.style.backgroundColor='grey';
+}
+b3.onclick=function(){
+    p1.style.backgroundColor='grey';
+    p2.style.backgroundColor='grey';
+    p3.style.backgroundColor='green';
+}
+***
